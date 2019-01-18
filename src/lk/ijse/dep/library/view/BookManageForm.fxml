@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="458.0" prefWidth="600.0" style="-fx-background-color: #e1e2ff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.library.controller.BookManageFormController">
+   <children>
+      <ImageView fx:id="btnhome" fitHeight="32.0" fitWidth="41.0" layoutX="556.0" layoutY="13.0" onMouseClicked="#dashboard">
+         <image>
+            <Image url="@../asset/icons8_Home_32px.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtISBN" layoutX="262.0" layoutY="98.0" />
+      <JFXTextField fx:id="TxtBookTitle" layoutX="262.0" layoutY="126.0" promptText=" " />
+      <JFXTextField fx:id="TxtAuthor" layoutX="263.0" layoutY="155.0" promptText=" " />
+      <JFXTextField fx:id="TxtPubName" layoutX="420.0" layoutY="184.0" promptText=" " />
+      <Label layoutX="127.0" layoutY="106.0" text="ISBN" />
+      <Label layoutX="127.0" layoutY="134.0" text="Book Title" />
+      <Label layoutX="128.0" layoutY="155.0" prefHeight="32.0" prefWidth="72.0" text="Author" />
+      <Label layoutX="128.0" layoutY="184.0" prefHeight="32.0" prefWidth="72.0" text="Publisher" />
+      <RadioButton fx:id="RadioAvail" layoutX="255.0" layoutY="227.0" mnemonicParsing="false" text="Available">
+         <toggleGroup>
+            <ToggleGroup fx:id="BookGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RadioBorrow" layoutX="330.0" layoutY="226.0" mnemonicParsing="false" text="Borrowed" toggleGroup="$BookGroup" />
+      <TableView fx:id="Tblbookmange" layoutX="39.0" layoutY="280.0" prefHeight="146.0" prefWidth="522.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ISBN" />
+          <TableColumn prefWidth="120.0" text="Book Title" />
+            <TableColumn prefWidth="103.0" text="Author" />
+            <TableColumn prefWidth="115.0" text="Publisher" />
+            <TableColumn prefWidth="108.0" text="Availability" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="TxtPubID" layoutX="262.0" layoutY="184.0" promptText=" " />
+      <Label layoutX="197.0" layoutY="29.0" prefHeight="35.0" prefWidth="203.0" text="Book Manage" textFill="#1700ab">
+         <font>
+            <Font name="Cambria" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="BtnHome" layoutX="560.0" layoutY="38.0" onMouseClicked="#Home" text="Home" />
+      <JFXButton fx:id="BtnSave" buttonType="RAISED" layoutX="427.0" layoutY="244.0" onAction="#Save" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #0062ff;" text="Save" />
+      <JFXButton fx:id="Btndelete" buttonType="RAISED" layoutX="494.0" layoutY="244.0" onAction="#delete" style="-fx-background-color: #ff0505;" text="Delete" />
+      <ImageView fx:id="btnadd" fitHeight="25.0" fitWidth="26.0" layoutX="412.0" layoutY="94.0" onMouseClicked="#NewAdd" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8_Add_96px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="532.0" prefWidth="600.0" style="-fx-background-color: #e1e2ff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.library.controller.BorrowManageFormController">
+    <children>
+        <ImageView fx:id="btnHome" fitHeight="25.0" fitWidth="26.0" layoutX="561.0" layoutY="13.0" onMouseClicked="#Dashboard">
+            <image>
+                <Image url="@../asset/icons8_Home_32px.png" />
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="txtISBN" layoutX="116.0" layoutY="90.0" onKeyPressed="#IsbnPress" promptText="ISBN" />
+        <JFXTextField fx:id="TxtBookTitle" layoutX="367.0" layoutY="90.0" promptText="Book Title" />
+        <TableView fx:id="TblBorrowmange" layoutX="1.0" layoutY="347.0" prefHeight="146.0" prefWidth="597.0">
+            <columns>
+                <TableColumn prefWidth="67.0" text="ISBN" />
+                <TableColumn prefWidth="133.0" text="Book Title" />
+                <TableColumn prefWidth="71.0" text="Member ID" />
+                <TableColumn prefWidth="135.0" text="Member Name" />
+                <TableColumn prefWidth="91.0" text="Issue Date" />
+            <TableColumn prefWidth="123.0" text="Return Date" />
+            </columns>
+        </TableView>
+        <Label layoutX="197.0" layoutY="29.0" prefHeight="35.0" prefWidth="217.0" text="Borrows Manage" textFill="#1700ab">
+            <font>
+                <Font name="Cambria" size="28.0" />
+            </font>
+        </Label>
+        <Label fx:id="BtnHome" layoutX="560.0" layoutY="38.0" onMouseClicked="#Home" text="Home" />
+        <JFXButton fx:id="BtnAdd" buttonType="RAISED" layoutX="387.0" layoutY="244.0" onAction="#Add" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #0062ff;" text="Add" />
+        <JFXButton fx:id="Btndelete" buttonType="RAISED" layoutX="451.0" layoutY="244.0" onAction="#delete" style="-fx-background-color: #ff0505;" text="Delete" />
+      <JFXTextField fx:id="txtMemName" layoutX="367.0" layoutY="130.0" promptText="Member Name" />
+      <JFXTextField fx:id="txtmemID" layoutX="115.0" layoutY="130.0" onKeyPressed="#memberIdpress" promptText="Member ID" />
+      <JFXDatePicker fx:id="IssuDate" layoutX="113.0" layoutY="168.0" promptText="Issue Date" />
+      <JFXDatePicker fx:id="Expirdate" layoutX="367.0" layoutY="167.0" promptText="Return Date" />
+    </children>
+</AnchorPane>

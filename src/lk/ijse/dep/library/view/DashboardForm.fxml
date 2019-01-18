@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep.library.controller.DashboardFormController">
+   <children>
+      <AnchorPane layoutX="-7.0" layoutY="-4.0" prefHeight="409.0" prefWidth="600.0" style="-fx-background-color: #e1e2ff;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="111.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="root1" fitHeight="407.0" fitWidth="620.0" layoutY="4.0" opacity="0.13">
+               <image>
+                  <Image url="@../asset/capita_lms_image2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="BookId" fitHeight="100.0" fitWidth="100.0" layoutX="36.0" layoutY="155.0" onMouseClicked="#bookmanage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/Library-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ReturnId" fitHeight="100.0" fitWidth="115.0" layoutX="493.0" layoutY="151.0" onMouseClicked="#Return" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/Books-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="BorrowId" fitHeight="100.0" fitWidth="103.0" layoutX="340.0" layoutY="155.0" onMouseClicked="#Borrow" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/Books-1-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="MemberId" fitHeight="100.0" fitWidth="103.0" layoutX="191.0" layoutY="155.0" onMouseClicked="#membermanage" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/man-icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="35.0" layoutY="266.0" text="Books Manage " textFill="#7c0034">
+               <font>
+                  <Font name="Cambria" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="187.0" layoutY="266.0" text="Member Manage" textFill="#0053a1">
+               <font>
+                  <Font name="Cambria" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="343.0" layoutY="243.0" prefHeight="67.0" prefWidth="133.0" text="Borrows Manage" textFill="#a10062">
+               <font>
+                  <Font name="Cambria" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="27.0" prefHeight="82.0" prefWidth="430.0" text="LIBRARY MANAGEMENT SYSTEM" textFill="#490e82de">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="499.0" layoutY="266.0" text="Return Books" textFill="#0053a1">
+               <font>
+                  <Font name="Cambria" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
